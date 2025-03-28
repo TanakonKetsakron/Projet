@@ -131,7 +131,7 @@ const submitData = async () => {
     }
 
     let htmlData = '<div>'
-    htmlData += `<div> ${error.message} </div>`
+    htmlData += `<div> ${error.message} </div>`;
     htmlData += '<ul>'
     for (let i = 0; i < error.errors.length; i++) {
       htmlData += `<li> ${error.errors[i]} </li>`
