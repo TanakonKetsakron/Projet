@@ -42,12 +42,14 @@ button { /*ปุ่ม*/
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bold;
 }
 
-button:hover {/*สีปุ่มหลัง เม้าชี้*/
+button:hover {/*สีปุ่มหลัง เม้าชี้ทั้งหมด ช่อง Action 1*/
     background-color:rgb(255, 255, 255); /* สีพื้นหลังของปุ่มเมื่อ hover */
     color: red; /* สีข้อความของปุ่มเมื่อ hoverทุกแถว */
     transform: scale(1.5); /*ปุ่มใหญ่เมื่อชี้*/
+    font-weight: bold;
 }
 
 a button {/*ปรับ สีปุ่ม edit*/
@@ -66,6 +68,7 @@ body {/*สีพื้นหลัง ใหญ่*/
     background-color: #7D0A0A; /* กำหนดสีพื้นหลัง */
     color: white; /* เปลี่ยนสีข้อความ */
 }
+
 .back-button { /*ปุ่มลูกศร กลับ*/
     display: inline-flex;
     justify-content: center;
@@ -86,6 +89,67 @@ body {/*สีพื้นหลัง ใหญ่*/
     background-color: #BF3131; /* สีพื้นหลังของปุ่มเมื่อ hover */
     box-shadow: 6px 6px 12px rgba(129, 255, 124, 0.3), 0 0 20px rgba(0, 0, 0, 0.2); /* เงาที่เข้มขึ้นเมื่อ hover */
     transform: translateY(-4px); /* ทำให้ปุ่มลอยขึ้นเล็กน้อย */
+}
+/* สีเหลือง: รออนุมัติ */
+.status-pending {
+    background-color: yellow;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* สีเขียว: อนุมัติ */
+.status-approved {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* สีแดง: ไม่อนุมัติ */
+.status-rejected {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+td:nth-child(4) { /* กำหนดให้คอลัมน์ date_time */
+    font-family: 'Arial', sans-serif; /* เปลี่ยนฟอนต์ */
+    font-size: 14px; /* ปรับขนาดฟอนต์ */
+    font-weight: bold; /* ทำให้ตัวหนา */
+    color: white; /* สีตัวอักษร */
+}
+.approve {
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.approve:hover {
+    background-color: green;
+    color: white;
+}
+
+.reject {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.reject:hover {
+    background-color: darkred;
+    color: white;
 }
 
 
