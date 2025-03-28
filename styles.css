@@ -108,21 +108,21 @@ input.form:hover, textarea:hover{/* แก้ไข การเอาเม้�
 }
 
 .message {
-    margin-bottom: 20px;
     display: none;
     padding: 10px;
-    border-radius: 6px;
-}
-
-.message.success {
-    background-color: lightgreen;/*พื้นหลังเขียวอ่อน*/
-    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .message.danger {
-    background-color: red; /*พื้นหลังสีดำ*/
-    color: white; /*อัษรที่แสดงสีขาว*/
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
 }
+
 
 @media (max-width: 768px) {
     .container {

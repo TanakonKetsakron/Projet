@@ -27,7 +27,7 @@ window.onload = async () => {
       documentDOM.value = documents.document
       noteDOM.value = documents.note
 
-      let genderDOM = document.querySelector('input[name=gender]') 
+       
       let documentDOMs = document.querySelector('input[name=document]:checked');
       
       
@@ -52,22 +52,13 @@ window.onload = async () => {
 const validateData = (documentsData) => {
   let errors = []
   if (!documentsData.firstName) {
-    errors.push('กรุณากรอกชื่อ')
+    errors.push('-- กรุณากรอกชื่อ  --')
   }
   if (!documentsData.lastName) {
-    errors.push('กรุณากรอกนามสกุล')
-  }
-  if (!documentsData.age) {
-    errors.push('กรุณากรอกอายุ')
-  }
-  if (!documentsData.gender) {
-    errors.push('กรุณาเลือกเพศ')
+    errors.push('-- กรุณากรอกนามสกุล  --')
   }
   if (documentsData.document.length === 0) {
-    errors.push('กรุณาเลือกความสนใจ')
-  }
-  if (!documentsData.note) {
-    errors.push('กรุณากรอกคำอธิบาย')
+    errors.push('-- กรุณาเลือกประเภทเอกสาร    --')
   }
   return errors
 }
@@ -82,14 +73,14 @@ const submitData = async () => {
     let messageDOM = document.getElementById('message');
   
     try {
-        let gender = genderDOM ? genderDOM.value : '';
+        let gender = genderDOM ? genderDOM.value : 'อื่นๆ';
         let document = documentDOMs  ? documentDOMs.value : '';
         
   
         let documentData = {
             firstName: firstNameDOM.value,
             lastName: lastNameDOM.value,
-            age: ageDOM.value,
+            age: ageDOM.value ? parseInt(ageDOM.value) : 0,
             gender: gender,
             note:noteDOM.value,
             document: document

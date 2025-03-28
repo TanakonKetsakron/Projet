@@ -44,29 +44,29 @@ button { /*ปุ่ม*/
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #FFFFFF; /* สีพื้นหลังของปุ่มเมื่อ hover */
+button:hover {/*สีปุ่มหลัง เม้าชี้*/
+    background-color:rgb(255, 255, 255); /* สีพื้นหลังของปุ่มเมื่อ hover */
     color: red; /* สีข้อความของปุ่มเมื่อ hoverทุกแถว */
-    transform: scale(1.5);
+    transform: scale(1.5); /*ปุ่มใหญ่เมื่อชี้*/
 }
 
-a button {
+a button {/*ปรับ สีปุ่ม edit*/
     background-color: #4CAF50; /* สีพื้นหลังของปุ่ม Edit */
     color: white; /* สีข้อความของปุ่ม Edit */
     border: none; /* ลบขอบของปุ่ม */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ปุ่ม Edit */
 }
-.delete {
+.delete { /*ปรับปุ่มdelete*/
     background-color: #f44336; /* สีพื้นหลังของปุ่ม Delete */
     color: white; /* สีข้อความของปุ่ม Delete */
     border: none; /* ลบขอบของปุ่ม */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ปุ่ม Delete */
 }
-body {
+body {/*สีพื้นหลัง ใหญ่*/
     background-color: #7D0A0A; /* กำหนดสีพื้นหลัง */
     color: white; /* เปลี่ยนสีข้อความ */
 }
-.back-button {
+.back-button { /*ปุ่มลูกศร กลับ*/
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -82,9 +82,9 @@ body {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1); /* เงาของปุ่ม */
 }
 
-.back-button:hover {
+.back-button:hover { /*ปุ่มลูกศร*/
     background-color: #BF3131; /* สีพื้นหลังของปุ่มเมื่อ hover */
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2); /* เงาที่เข้มขึ้นเมื่อ hover */
+    box-shadow: 6px 6px 12px rgba(129, 255, 124, 0.3), 0 0 20px rgba(0, 0, 0, 0.2); /* เงาที่เข้มขึ้นเมื่อ hover */
     transform: translateY(-4px); /* ทำให้ปุ่มลอยขึ้นเล็กน้อย */
 }
 

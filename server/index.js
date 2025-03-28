@@ -33,18 +33,12 @@ const validateData = (userData) => {
   if (!userData.lastName) {
     errors.push ('กรุณากรอกนามสกุล')
   }
-  if (!userData.age) {
-    errors.push ('กรุณากรอกอายุ')
-  }
-  if (!userData.gender) {
-    errors.push ('กรุณาเลือกเพศ')
-  }
+ 
+ 
   if (!userData.document) {
     errors.push ('กรุณาเลือกความสนใจ')
   }
-  if (!userData.note) {
-    errors.push ('กรุณากรอกคำอธิบาย')
-  }
+  
   return errors
 }
 
