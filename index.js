@@ -115,7 +115,7 @@ const submitData = async () => {
         }
   
           setTimeout(() => {
-      window.location.href = "user.html";
+      window.location.href = "users.html";
     }, 300);
 
     messageDOM.innerText = message
