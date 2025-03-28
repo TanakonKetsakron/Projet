@@ -1,25 +1,78 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บตัวอย่าง</title>
-    <link rel="stylesheet" href="style.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <!-- ส่วนนี้คือ CSS -->
+     <!-- ใช้สำหรับแต่ง (id class) -->
+     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <header>
-        <h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน</h1>
-    </header>
+     <!-- form -->
+     <div class="container">
+          <div class="header">
+               Register form
+          </div>
 
-    <section>
-        <p>นี่คือตัวอย่างเว็บไซต์ที่สร้างด้วย HTML, CSS และ JavaScript</p>
-        <button id="clickMe">คลิกฉัน!</button>
-    </section>
+          <div class="flex form-input">
+               <div class="header-form">ชื่อ</div>
+               <input class="form" name="firstname" type="text">
+          </div>
 
-    <footer>
-        <p>© 2025 เว็บไซต์ของฉัน</p>
-    </footer>
+          <div class="flex form-input">
+               <div class="header-form">นามสกุล</div>
+               <input class="form" name="lastname" type="text"> 
+          </div>
 
-    <script src="script.js"></script>
+          <div class="flex form-input">
+               <div class="header-form">อายุ</div>
+               <input class="form" name="age" type="number" min="0" max="100">
+          </div>
+
+          <div class="flex gender form-input">
+               <div class="header-form">เพศ</div>
+               <div class="flex">
+                    <div>
+                         <input name="gender" type="radio" value="ชาย"> ชาย
+                    </div>
+                    <div>
+                         <input name="gender" type="radio" value="หญิง"> หญิง
+                    </div>
+                    <div>
+                         <input name="gender" type="radio" value="อื่นๆ"> อื่นๆ
+                    </div>
+               </div>
+          </div>
+
+          <div class="form-input">
+               งานอดิเรก
+               <div>
+                    <input name="document" type="radio" value="ต้องการ"> ต้องการ
+               </div>
+               <div>
+                    <input name="document" type="radio" value="ไม่ต้องการ"> ไม่ต้องการ
+               </div>
+               
+          </div>
+          <div class="form-input">
+               คำอธิบาย
+               <textarea name="note"></textarea>
+          </div>
+          <div id=message class="message"></div>
+          <div class="center">
+               <button onclick="submitData()" class="button">ส่งข้อมูล</button>
+          </div>
+          <div class="center">
+               <a href="users.html">
+                    <button class="button">ไปยังหน้าผู้ใช้</button>
+               </a>
+
+          </div>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+     <script src="index.js"></script>
 </body>
 </html>
